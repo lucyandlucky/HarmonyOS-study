@@ -7,6 +7,14 @@
       "data": {
         "description": "this is a message"
       }
+    },
+    {
+      "name": "MainTab",
+      "pageSourceFile": "src/main/ets/pages/tab.ets",
+      "buildFunction": "MainTabBuilder",
+      "data": {
+        "description": "this is a message"
+      }
     }
   ]
 }

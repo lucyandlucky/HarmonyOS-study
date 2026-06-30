@@ -1,3 +1,5 @@
+import { common } from "@kit.AbilityKit"
+
 @Extend(TextInput)
 function inputStyle() {
   .placeholderColor($r('app.color.line_color'))
@@ -30,6 +32,8 @@ export function LoginPageBuilder() {
 
 @Component
 export struct LoginPage {
+  @State pathStack: NavPathStack = new NavPathStack()
+
   @Builder
   ImageButton(src: Resource) {
     Button({ type: ButtonType.Circle, stateEffect: true }) {
@@ -96,7 +100,7 @@ export struct LoginPage {
             bottom: '12vp'
           })
           .onClick((event: ClickEvent) => {
-            // this.pathStack.replacePathByName('MainPage', undefined, true)
+            this.pathStack.replacePathByName('MainTab', undefined, true)
           })
 
         Text($r('app.string.register_account'))
@@ -128,6 +132,15 @@ export struct LoginPage {
       .background($r('app.color.background'))
       .width('100%')
       .height('100%')
-    }.hideTitleBar(true)
+    }
+    .hideTitleBar(true)
+    .onReady((context: NavDestinationContext) => {
+      this.pathStack = context.pathStack
+    })
+    .onBackPressed(() => {
+      const context = this.getUIContext().getHostContext() as common.UIAbilityContext
+      context.terminateSelf().catch()
+      return true
+    })
   }
 }
