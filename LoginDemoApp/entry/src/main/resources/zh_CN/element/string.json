@@ -14,39 +14,39 @@
     },
     {
       "name": "login_page",
-      "value": "Login page"
+      "value": "登录界面"
     },
     {
       "name": "login_more",
-      "value": "Log in to your account to use more services"
+      "value": "登录账号以使用更多服务"
     },
     {
       "name": "account",
-      "value": "Account"
+      "value": "账号"
     },
     {
       "name": "password",
-      "value": "Password"
+      "value": "密码"
     },
     {
       "name": "login",
-      "value": "Log in"
+      "value": "登录"
     },
     {
       "name": "register_account",
-      "value": "Registering an Account"
+      "value": "注册账号"
     },
     {
       "name": "forgot_password",
-      "value": "Forgot Password"
+      "value": "忘记密码"
     },
     {
       "name": "message_login",
-      "value": "SMS verification code login"
+      "value": "短信验证码登录"
     },
     {
       "name": "other_login_method",
-      "value": "Other login methods"
+      "value": "其他登录方式"
     },
     {
       "name": "vertical_line",
@@ -54,131 +54,131 @@
     },
     {
       "name": "input_empty_tips",
-      "value": "The input cannot be empty."
+      "value": "输入不能为空"
     },
     {
       "name": "login_success",
-      "value": "The login is successful."
+      "value": "登录成功"
     },
     {
       "name": "my_love",
-      "value": "My favorite"
+      "value": "我的最爱"
     },
     {
       "name": "history_record",
-      "value": "History"
+      "value": "历史记录"
     },
     {
       "name": "message",
-      "value": "Message"
+      "value": "消息"
     },
     {
       "name": "shopping_cart",
-      "value": "Shopping cart"
+      "value": "购物车"
     },
     {
       "name": "my_goal",
-      "value": "My goal"
+      "value": "我的目标"
     },
     {
       "name": "group",
-      "value": "Group"
+      "value": "圈子"
     },
     {
       "name": "favorites",
-      "value": "Favorites"
+      "value": "收藏"
     },
     {
       "name": "recycle_bin",
-      "value": "Recycle Bin"
+      "value": "回收站"
     },
     {
       "name": "rankings",
-      "value": "Rankings"
+      "value": "排行榜"
     },
     {
       "name": "new_product_debut",
-      "value": "New product debut"
+      "value": "新品首发"
     },
     {
       "name": "big_name_flash",
-      "value": "Big name flash"
+      "value": "大牌闪购"
     },
     {
       "name": "find_good",
-      "value": "Find good things"
+      "value": "发现好物"
     },
     {
       "name": "xiamen_station",
-      "value": "Xiamen Station, we'll see you."
+      "value": "厦门站，我们不见不散"
     },
     {
       "name": "more_big_names",
-      "value": "More Big Names"
+      "value": "更多大牌"
     },
     {
       "name": "push_notifications",
-      "value": "Push Notifications"
+      "value": "推送通知"
     },
     {
       "name": "data_management",
-      "value": "Data Management"
+      "value": "数据管理"
     },
     {
       "name": "menu_settings",
-      "value": "Menu Settings"
+      "value": "菜单设置"
     },
     {
       "name": "about",
-      "value": "About"
+      "value": "关于"
     },
     {
       "name": "clear_cache",
-      "value": "Clear Cache"
+      "value": "清除缓存"
     },
     {
       "name": "mainPage_tabTitles_home",
-      "value": "Home"
+      "value": "首页"
     },
     {
       "name": "mainPage_tabTitles_mine",
-      "value": "Mine"
+      "value": "我的"
     },
     {
       "name": "mainPage_top",
-      "value": "Rankings"
+      "value": "排行榜"
     },
     {
       "name": "mainPage_text_top",
-      "value": "Xiamen Station, we'll see you."
+      "value": "厦门站，我们不见不散"
     },
     {
       "name": "mainPage_new",
-      "value": "New product debut"
+      "value": "新品首发"
     },
     {
       "name": "mainPage_text_new",
-      "value": "Xiamen Station, we'll see you."
+      "value": "厦门站，我们不见不散"
     },
     {
       "name": "mainPage_brand",
-      "value": "Big name flash"
+      "value": "大牌闪购"
     },
     {
       "name": "mainPage_text_brand",
-      "value": "More Big Names"
+      "value": "更多大牌"
     },
     {
       "name": "mainPage_found",
-      "value": "Find good things"
+      "value": "发现好物"
     },
     {
       "name": "mainPage_text_found",
-      "value": "Xiamen Station, we'll see you."
+      "value": "厦门站，我们不见不散"
     },
     {
       "name": "setting_account_name",
-      "value": "Mr. Lee"
+      "value": "李先生"
     },
     {
       "name": "setting_account_email",
@@ -186,131 +186,131 @@
     },
     {
       "name": "setting_list_news",
-      "value": "Push Notifications"
+      "value": "推送通知"
     },
     {
       "name": "setting_list_font",
-      "value": "Fontsize Change"
+      "value": "字体大小调节"
     },
     {
       "name": "setting_list_menu",
-      "value": "Menu Settings"
+      "value": "菜单设置"
     },
     {
       "name": "setting_list_about",
-      "value": "About"
+      "value": "关于"
     },
     {
       "name": "setting_list_storage",
-      "value": "Clear Cache"
+      "value": "清除缓存"
     },
     {
       "name": "setting_list_privacy",
-      "value": "Privacy Agreement"
+      "value": "隐私协议"
     },
     {
       "name": "setting_button",
-      "value": "Logout"
+      "value": "退出登录"
     },
     {
       "name": "home_list",
-      "value": "List"
+      "value": "列表"
     },
     {
       "name": "setting_toggle",
-      "value": "switch"
+      "value": "开关"
     },
     {
       "name": "bind_title",
-      "value": "Exercise completion"
+      "value": "运动完成情况"
     },
     {
       "name": "fontsize_change",
-      "value": "FontSize change"
+      "value": "字体大小调节"
     },
     {
       "name": "Confirmed",
-      "value": "Confirmed"
+      "value": "确认"
     },
     {
       "name": "Cancel",
-      "value": "Cancel"
+      "value": "取消"
     },
     {
       "name": "sport_name",
-      "value": "Sport Name"
+      "value": "运动名"
     },
     {
       "name": "Morning_jogging",
-      "value": "Morning jogging"
+      "value": "晨跑"
     },
     {
       "name": "Yoga",
-      "value": "Yoga"
+      "value": "瑜伽"
     },
     {
       "name": "Swimming",
-      "value": "Swimming"
+      "value": "游泳"
     },
     {
       "name": "Exercise_duration",
-      "value": "Exercise duration: (minutes)"
+      "value": "运动时长: (分钟)"
     },
     {
       "name": "Completion_Status",
-      "value": "Completion Status"
+      "value": "完成状态"
     },
     {
       "name": "Completed",
-      "value": "Completed"
+      "value": "已完成"
     },
     {
       "name": "Uncompleted",
-      "value": "Uncompleted"
+      "value": "未完成"
     },
     {
       "name": "submit",
-      "value": "Submit"
+      "value": "提交"
     },
     {
       "name": "enter_duration",
-      "value": "Please enter the exercise duration."
+      "value": "请输入运动时长"
     },
     {
       "name": "My_plans",
-      "value": "My Plans"
+      "value": "我的计划"
     },
     {
       "name": "ALL",
-      "value": "All"
+      "value": "任意"
     },
     {
       "name": "delete_question",
-      "value": "Are you sure you want to delete the plan?"
+      "value": "确定要删除该计划吗？"
     },
     {
       "name": "delete",
-      "value": "Delete"
+      "value": "删除"
     },
     {
       "name": "Add_Plans",
-      "value": "Add plan"
+      "value": "新增计划"
     },
     {
       "name": "status",
-      "value": "Status"
+      "value": "状态"
     },
     {
       "name": "Duration",
-      "value": "Duration"
+      "value": "时长"
     },
     {
       "name": "Tab_Bar_One",
-      "value": "Home Page"
+      "value": "首页"
     },
     {
       "name": "Tab_Bar_Two",
-      "value": "Mine"
+      "value": "我的"
     }
   ]
 }

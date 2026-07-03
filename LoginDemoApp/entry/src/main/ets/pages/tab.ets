@@ -53,7 +53,7 @@ struct MainTab {
           right: '12vp'
         })
         .background('#F1F3F5')
-        .tabBar(this.TabBuilder($r('app.string.tab1'), 0, $r('sys.symbol.house_fill')))
+        .tabBar(this.TabBuilder($r('app.string.Tab_Bar_One'), 0, $r('sys.symbol.house_fill')))
 
         TabContent() {
           Text('Person')
@@ -63,7 +63,7 @@ struct MainTab {
           right: '12vp'
         })
         .background('#F1F3F5')
-        .tabBar(this.TabBuilder($r('app.string.tab2'), 1, $r('sys.symbol.person_crop_circle_fill_1')))
+        .tabBar(this.TabBuilder($r('app.string.Tab_Bar_Two'), 1, $r('sys.symbol.person_crop_circle_fill_1')))
       }.onChange((index: number) => {
         this.currentIndex = index
       })
