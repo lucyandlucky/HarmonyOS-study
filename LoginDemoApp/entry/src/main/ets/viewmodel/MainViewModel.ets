@@ -24,6 +24,28 @@ class MainViewModel {
     ]
     return firstGridData
   }
+
+  getSettingListData(): Array<ItemData[]> {
+
+    const settingListData: ItemData[][] = [
+      [
+        new ItemData(0, $r('app.string.setting_list_news'), $r('app.media.news'), $r("app.string.setting_toggle"))
+      ],
+      [
+        new ItemData(1, $r('app.string.setting_list_font'), $r('app.media.data')),
+        new ItemData(2, $r('app.string.setting_list_menu'), $r('app.media.menu')),
+      ],
+      [
+        new ItemData(3, $r('app.string.clear_cache'), $r('app.media.storage')),
+        new ItemData(4, $r('app.string.setting_list_privacy'), $r('app.media.person_shield')),
+      ],
+      [
+        new ItemData(5, $r('app.string.setting_list_about'), $r('app.media.about'))
+      ]
+    ]
+
+    return settingListData
+  }
 }
 
 export default new MainViewModel()

@@ -1,5 +1,6 @@
 import { common } from "@kit.AbilityKit";
 import Home from "../view/Home";
+import Setting from "../view/Setting";
 
 
 @Builder
@@ -48,7 +49,8 @@ struct MainTab {
         controller: this.tabsController
       }) {
         TabContent() {
-          Home()
+          Setting()
+          // Home()
         }
         .padding({
           left: '12vp',
@@ -58,7 +60,7 @@ struct MainTab {
         .tabBar(this.TabBuilder($r('app.string.Tab_Bar_One'), 0, $r('sys.symbol.house_fill')))
 
         TabContent() {
-          Text('Person')
+          Setting()
         }
         .padding({
           left: '12vp',
