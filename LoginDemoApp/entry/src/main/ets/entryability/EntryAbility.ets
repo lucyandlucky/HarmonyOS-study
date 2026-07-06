@@ -21,6 +21,9 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage): void {
     // MainPage window is created, set main page for this ability
     hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+    windowStage.getMainWindow().then((data) => {
+      data.setWindowLayoutFullScreen(true)
+    })
 
     windowStage.loadContent('pages/router', (err) => {
       if (err.code) {

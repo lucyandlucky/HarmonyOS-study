@@ -1,4 +1,6 @@
 import { common } from "@kit.AbilityKit";
+import Home from "../view/Home";
+
 
 @Builder
 export function MainTabBuilder() {
@@ -46,7 +48,7 @@ struct MainTab {
         controller: this.tabsController
       }) {
         TabContent() {
-          Text('home')
+          Home()
         }
         .padding({
           left: '12vp',
@@ -68,7 +70,9 @@ struct MainTab {
         this.currentIndex = index
       })
     }
+    .height('100%')
     .hideTitleBar(true)
+    .backgroundColor('#F1F3F5')
     .onBackPressed(() => {
       let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       context.terminateSelf().catch()
