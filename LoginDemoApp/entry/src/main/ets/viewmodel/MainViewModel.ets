@@ -1,6 +1,6 @@
 import ItemData from "./ItemData";
 
-export class MainViewModel {
+class MainViewModel {
   getSwiperImages(): Array<Resource> {
     const swipeResource: Resource[] = [
       $r('app.media.fig1'),
@@ -10,7 +10,6 @@ export class MainViewModel {
     ]
     return swipeResource
   }
-
 
   getFirstGridData(): Array<ItemData> {
     const firstGridData: ItemData[] = [
@@ -26,3 +25,5 @@ export class MainViewModel {
     return firstGridData
   }
 }
+
+export default new MainViewModel()
