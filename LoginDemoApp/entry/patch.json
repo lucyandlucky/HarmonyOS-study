@@ -1,10 +1,10 @@
 {
   "app": {
     "bundleName": "com.example.logindemoapp",
-    "patchVersionCode": 2000239,
+    "patchVersionCode": 2000241,
     "versionCode": 1000000,
     "versionName": "1.0.0",
-    "patchVersionName": "2000239"
+    "patchVersionName": "2000241"
   },
   "module": {
     "name": "entry",
