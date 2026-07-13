@@ -7,6 +7,14 @@
       "data": {
         "description": "this is pageOne"
       }
+    },
+    {
+      "name": "PageTwo",
+      "pageSourceFile": "src/main/ets/pages/EntryPageTwo.ets",
+      "buildFunction": "PageTwoBuilder",
+      "data": {
+        "description": "this is pageTwo"
+      }
     }
   ]
 }

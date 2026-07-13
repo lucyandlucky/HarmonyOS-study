@@ -1,16 +1,16 @@
 import { CommonColumn, NavigationButton } from "common"
 
-interface PageOneRouteData {
+interface PageTwoRouteData {
   description: string
 }
 
 @Builder
-export function PageOneBuilder() {
-  EntryPageOne()
+export function PageTwoBuilder() {
+  EntryPageTwo()
 }
 
 @Component
-export struct EntryPageOne {
+export struct EntryPageTwo {
   @State description: string = ''
 
   build() {
@@ -18,13 +18,13 @@ export struct EntryPageOne {
       CommonColumn() {
         Text(this.description)
         NavigationButton({ title: $r('app.string.entry_index') })
-        NavigationButton({ title: $r('app.string.entry_pageTwo'), pathName: 'PageTwo' })
+        NavigationButton({ title: $r('app.string.entry_pageOne'), pathName: 'PageOne' })
       }
     }
-    .title('entry-page-one')
+    .title('entry-page-two')
     .onReady((context: NavDestinationContext) => {
       const config = context.getConfigInRouteMap()
-      const data = config?.data as PageOneRouteData | undefined
+      const data = config?.data as PageTwoRouteData | undefined
       this.description = data?.description ?? ''
     })
   }
