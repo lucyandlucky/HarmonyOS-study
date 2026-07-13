@@ -1,7 +1,7 @@
 @Component
 export struct NavigationButton {
   @Consume pageInfos: NavPathStack
-  @Prop title: Resource
+  @Prop title: ResourceStr
   @Prop pathName: string
 
   build() {

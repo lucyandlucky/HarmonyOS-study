@@ -1,3 +1,9 @@
+import { CommonColumn, NavigationButton } from "common"
+
+interface PageOneRouteData {
+  description: string
+}
+
 @Builder
 export function PageOneBuilder() {
   EntryPageOne()
@@ -5,10 +11,20 @@ export function PageOneBuilder() {
 
 @Component
 export struct EntryPageOne {
+  @State description: string = ''
+
   build() {
     NavDestination() {
-
-      Text('demo')
-    }.title('entry-page-one')
+      CommonColumn() {
+        Text(this.description)
+        NavigationButton({ title: $r('app.string.entry_index') })
+      }
+    }
+    .title('entry-page-one')
+    .onReady((context: NavDestinationContext) => {
+      const config = context.getConfigInRouteMap()
+      const data = config?.data as PageOneRouteData | undefined
+      this.description = data?.description ?? ''
+    })
   }
 }
