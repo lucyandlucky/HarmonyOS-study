@@ -1,23 +1,27 @@
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
+  pageInfos: NavPathStack = new NavPathStack()
 
   build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          this.message = 'Welcome';
-        })
+    Navigation(this.pageInfos) {
+      Column({ space: 12 }) {
+        Button($r('app.string.entry_pageOne'), { stateEffect: true, type: ButtonType.Capsule })
+          .width($r('app.string.button_width'))
+          .height($r('app.string.button_height'))
+          .onClick((event: ClickEvent) => {
+            this.pageInfos.pushPathByName('pageOne', null)
+          })
+      }
+      .width($r('app.string.navDestination_width'))
+      .height($r('app.string.navDestination_height'))
+      .justifyContent(FlexAlign.End)
+      .padding({
+        bottom: $r('app.string.column_padding'),
+        left: $r('app.string.column_padding'),
+        right: $r('app.string.column_padding'),
+      })
     }
-    .height('100%')
-    .width('100%')
+    .title($r('app.string.entry_index_title'))
   }
 }
