@@ -1,0 +1,12 @@
+{
+  "routerMap": [
+    {
+      "name": "harAPageOne",
+      "pageSourceFile": "src/main/ets/components/HarAPageOne.ets",
+      "buildFunction": "HarAPageBuilder",
+      "data": {
+        "description": "this is har-a-page-one"
+      }
+    }
+  ]
+}

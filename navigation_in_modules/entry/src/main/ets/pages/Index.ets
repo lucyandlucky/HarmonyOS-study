@@ -10,6 +10,7 @@ struct Index {
       CommonColumn() {
         NavigationButton({ title: $r('app.string.entry_pageOne'), pathName: 'PageOne' })
         NavigationButton({ title: $r('app.string.entry_pageTwo'), pathName: 'PageTwo' })
+        NavigationButton({ title: $r('app.string.harA_pageOne'), pathName: 'harAPageOne' })
       }
     }
     .title($r('app.string.entry_index_title'))

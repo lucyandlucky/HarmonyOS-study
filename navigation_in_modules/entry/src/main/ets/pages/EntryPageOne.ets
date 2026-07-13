@@ -19,6 +19,7 @@ export struct EntryPageOne {
         Text(this.description)
         NavigationButton({ title: $r('app.string.entry_index') })
         NavigationButton({ title: $r('app.string.entry_pageTwo'), pathName: 'PageTwo' })
+        NavigationButton({ title: $r('app.string.harA_pageOne'), pathName: 'harAPageOne' })
       }
     }
     .title('entry-page-one')

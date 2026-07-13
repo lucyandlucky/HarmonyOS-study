@@ -41,6 +41,10 @@
     {
       "name": "common",
       "srcPath": "./common",
+    },
+    {
+      "name": "harA",
+      "srcPath": "./harA",
     }
   ]
 }
