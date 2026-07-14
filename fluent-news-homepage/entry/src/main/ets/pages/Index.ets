@@ -7,6 +7,7 @@ import { BreakPointConstants } from '../constants/BreakpointConstants';
 import { CommonConstants } from '../constants/CommonConstants';
 import { i18n } from '@kit.LocalizationKit';
 import { JSON } from '@kit.ArkTS';
+import { Home } from '../views/Home';
 
 const locationChanger: AsyncCallback<geoLocationManager.Location> =
   (err, location) => {
@@ -79,7 +80,7 @@ struct Index {
           lg: BreakPointConstants.GRID_COLUMN_SPANS[4]
         }
       }) {
-        Text('home')
+        Home()
       }
       .width(CommonConstants.FULL_PERCENT)
       .height(CommonConstants.FULL_PERCENT)
