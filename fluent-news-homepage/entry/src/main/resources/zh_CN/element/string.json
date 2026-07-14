@@ -2,15 +2,15 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "模块描述"
     },
     {
       "name": "EntryAbility_desc",
-      "value": "description"
+      "value": "描述"
     },
     {
       "name": "EntryAbility_label",
-      "value": "news sample"
+      "value": "新闻首页"
     },
     {
       "name": "news_title_image_height",
@@ -33,14 +33,6 @@
       "value": "12vp"
     },
     {
-      "name": "location_desc",
-      "value": "Allow the app to obtain the device's location information in the news homepage scenario"
-    },
-    {
-      "name": "approximately_location_desc",
-      "value": "Allow the app to obtain the device's approximate location information in the news homepage scenario"
-    },
-    {
       "name": "news_page_height",
       "value": "93.3%"
     },
@@ -54,15 +46,15 @@
     },
     {
       "name": "placeholder",
-      "value": "Wuhan"
+      "value": "武汉"
     },
     {
       "name": "location",
-      "value": "Location"
+      "value": "当前定位"
     },
     {
       "name": "hotCity",
-      "value": "Hot cities in China"
+      "value": "国内热门城市"
     },
     {
       "name": "news_title_row_height",
@@ -74,7 +66,7 @@
     },
     {
       "name": "city_text_width",
-      "value": "23%"
+      "value": "20%"
     },
     {
       "name": "city_padding_right",
@@ -110,71 +102,79 @@
     },
     {
       "name": "mock1",
-      "value": "mockDataThree.json"
+      "value": "mockDataOne.json"
     },
     {
       "name": "mock2",
-      "value": "mockDataFour.json"
+      "value": "mockDataTwo.json"
     },
     {
       "name": "refresh",
-      "value": "Refresh successful"
+      "value": "刷新成功"
     },
     {
       "name": "search_text",
-      "value": "search"
+      "value": "搜索"
     },
     {
       "name": "get_location",
-      "value": "Get location"
+      "value": "获取定位"
     },
     {
       "name": "tab_bar_option_one",
-      "value": "Home page"
+      "value": "首页"
     },
     {
       "name": "tab_bar_option_two",
-      "value": "Concerned"
+      "value": "关注"
     },
     {
       "name": "tab_bar_option_three",
-      "value": "Mine"
+      "value": "我的"
     },
     {
       "name": "blank_view_text",
-      "value": "No data available at the moment"
+      "value": "暂无数据"
     },
     {
       "name": "tab_bar_type1",
-      "value": "   "
+      "value": "全部"
     },
     {
       "name": "tab_bar_type2",
-      "value": "XX"
+      "value": "国内"
     },
     {
       "name": "tab_bar_type3",
-      "value": "XX"
+      "value": "国际"
     },
     {
       "name": "tab_bar_type4",
-      "value": "   "
+      "value": "娱乐"
     },
     {
       "name": "tab_bar_type5",
-      "value": "   "
+      "value": "军事"
     },
     {
       "name": "tab_bar_type6",
-      "value": "   "
+      "value": "体育"
     },
     {
       "name": "tab_bar_type7",
-      "value": "Science and technology"
+      "value": "科技"
     },
     {
       "name": "tab_bar_type8",
-      "value": "Finance and Economics"
+      "value": "财经"
+    },
+    {
+      "name": "location_desc",
+      "value": "允许应用在新闻首页场景获取设备位置信息"
+    },
+    {
+      "name": "approximately_location_desc",
+      "value": "允许应用在新闻首页场景获取设备模糊位置信息"
     }
   ]
 }

@@ -33,14 +33,6 @@
       "value": "12vp"
     },
     {
-      "name": "location_desc",
-      "value": "Allow the app to obtain the device's location information in the news homepage scenario"
-    },
-    {
-      "name": "approximately_location_desc",
-      "value": "Allow the app to obtain the device's approximate location information in the news homepage scenario"
-    },
-    {
       "name": "news_page_height",
       "value": "93.3%"
     },
@@ -146,35 +138,43 @@
     },
     {
       "name": "tab_bar_type1",
-      "value": "   "
+      "value": "Tab1"
     },
     {
       "name": "tab_bar_type2",
-      "value": "XX"
+      "value": "Tab2"
     },
     {
       "name": "tab_bar_type3",
-      "value": "XX"
+      "value": "Tab3"
     },
     {
       "name": "tab_bar_type4",
-      "value": "   "
+      "value": "Tab4"
     },
     {
       "name": "tab_bar_type5",
-      "value": "   "
+      "value": "Tab5"
     },
     {
       "name": "tab_bar_type6",
-      "value": "   "
+      "value": "Tab6"
     },
     {
       "name": "tab_bar_type7",
-      "value": "Science and technology"
+      "value": "Tab7"
     },
     {
       "name": "tab_bar_type8",
-      "value": "Finance and Economics"
+      "value": "Tab8"
+    },
+    {
+      "name": "location_desc",
+      "value": "Allow the app to obtain the device's location information in the news homepage scenario"
+    },
+    {
+      "name": "approximately_location_desc",
+      "value": "Allow the app to obtain the device's approximate location information in the news homepage scenario"
     }
   ]
 }
