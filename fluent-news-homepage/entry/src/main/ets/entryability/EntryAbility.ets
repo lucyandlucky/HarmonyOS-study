@@ -36,7 +36,6 @@ export default class EntryAbility extends UIAbility {
     AppStorage.setOrCreate('currentColorMode', newConfig.colorMode)
     hilog.info(0x0000, 'testTag', 'the newConfig.colorMode is %{public}s',
       JSON.stringify(AppStorage.get('currentColorMode')) ?? '');
-
   }
 
   onWindowStageDestroy(): void {

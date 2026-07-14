@@ -75,6 +75,12 @@ export struct Home {
       new ComponentContent(this.getUIContext(), wrapBuilder<[TabBarOption]>(BottomTabBuilder), this.tabOption2)
     this.tabBarOption3 =
       new ComponentContent(this.getUIContext(), wrapBuilder<[TabBarOption]>(BottomTabBuilder), this.tabOption3)
+
+    const indexBak = this.currentIndex
+    this.currentIndex = -1
+    setTimeout(() => {
+      this.currentIndex = indexBak
+    }, 0)
   }
 
   aboutToDisappear(): void {
