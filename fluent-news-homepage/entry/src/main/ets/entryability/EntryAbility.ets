@@ -1,4 +1,4 @@
-import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { AbilityConstant, Configuration, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
 
@@ -30,6 +30,13 @@ export default class EntryAbility extends UIAbility {
       }
       hilog.info(DOMAIN, 'testTag', 'Succeeded in loading the content.');
     });
+  }
+
+  onConfigurationUpdate(newConfig: Configuration): void {
+    AppStorage.setOrCreate('currentColorMode', newConfig.colorMode)
+    hilog.info(0x0000, 'testTag', 'the newConfig.colorMode is %{public}s',
+      JSON.stringify(AppStorage.get('currentColorMode')) ?? '');
+
   }
 
   onWindowStageDestroy(): void {

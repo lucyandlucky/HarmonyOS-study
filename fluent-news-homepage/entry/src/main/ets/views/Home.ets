@@ -64,6 +64,21 @@ export struct Home {
   )
 
   onColorModeChange(): void {
+    this.destroyLottie()
+    this.tabOption1.path = ResourceUtil.getLottiePath('tabbar1', this.currentMode)
+    this.tabOption2.path = ResourceUtil.getLottiePath('tabbar2', this.currentMode)
+    this.tabOption3.path = ResourceUtil.getLottiePath('tabbar3', this.currentMode)
+
+    this.tabBarOption1 =
+      new ComponentContent(this.getUIContext(), wrapBuilder<[TabBarOption]>(BottomTabBuilder), this.tabOption1)
+    this.tabBarOption2 =
+      new ComponentContent(this.getUIContext(), wrapBuilder<[TabBarOption]>(BottomTabBuilder), this.tabOption2)
+    this.tabBarOption3 =
+      new ComponentContent(this.getUIContext(), wrapBuilder<[TabBarOption]>(BottomTabBuilder), this.tabOption3)
+  }
+
+  aboutToDisappear(): void {
+    this.destroyLottie()
   }
 
   lottieController(): void {
@@ -79,6 +94,15 @@ export struct Home {
       lottie.stop()
       lottie.play(this.tabOption3.name)
     }
+  }
+
+  destroyLottie(): void {
+    this.tabOption1.lottieItem?.removeEventListener('DOMLoaded')
+    this.tabOption2.lottieItem?.removeEventListener('DOMLoaded')
+    this.tabOption3.lottieItem?.removeEventListener('DOMLoaded')
+    lottie.destroy(this.tabOption1.name)
+    lottie.destroy(this.tabOption2.name)
+    lottie.destroy(this.tabOption3.name)
   }
 
   updateTabIndex(targetIndex: number): void {
