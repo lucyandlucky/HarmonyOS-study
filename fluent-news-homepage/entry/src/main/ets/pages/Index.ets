@@ -1,8 +1,12 @@
-import { abilityAccessCtrl } from "@kit.AbilityKit";
-import { BreakPointConstants } from '../constants/BreakpointConstants'
-import { geoLocationManager } from "@kit.LocationKit";
-import { hilog } from "@kit.PerformanceAnalysisKit";
-import { AsyncCallback } from "@kit.BasicServicesKit";
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { geoLocationManager } from '@kit.LocationKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { AsyncCallback } from '@kit.BasicServicesKit';
+
+import { BreakPointConstants } from '../constants/BreakpointConstants';
+import { CommonConstants } from '../constants/CommonConstants';
+import { i18n } from '@kit.LocalizationKit';
+import { JSON } from '@kit.ArkTS';
 
 const locationChanger: AsyncCallback<geoLocationManager.Location> =
   (err, location) => {
@@ -11,6 +15,32 @@ const locationChanger: AsyncCallback<geoLocationManager.Location> =
     }
     if (location) {
       hilog.info(0x0000, 'locationChanger: res=', JSON.stringify(location))
+      const reverseGeoCodeReq: geoLocationManager.ReverseGeoCodeRequest = {
+        latitude: location.latitude,
+        longitude: location.longitude,
+        maxItems: CommonConstants.MAX_ITEMS
+      }
+      const systemLanguage = i18n.System.getSystemLanguage()
+      if (systemLanguage.startsWith('en')) {
+        reverseGeoCodeReq.locale = 'en'
+      }
+      geoLocationManager.getAddressesFromLocation(reverseGeoCodeReq, (_, data) => {
+        if (!data) {
+          return
+        }
+        hilog.info(0x0000, 'getAddressesFromLocation: data=', JSON.stringify(data))
+        const reverseData = data[0]
+        if (!reverseData?.locality) {
+          return
+        }
+        if (systemLanguage === 'zh-Hans') {
+          AppStorage.setOrCreate('local', reverseData.locality.replace(/"/g, '').slice(0, -1))
+          AppStorage.setOrCreate('currentLocal', reverseData.locality.replace(/"/g, '').slice(0, -1))
+        } else {
+          AppStorage.setOrCreate('local', reverseData.locality.replace(/"/g, ''))
+          AppStorage.setOrCreate('currentLocal', reverseData.locality.replace(/"/g, ''))
+        }
+      })
     }
   }
 
@@ -31,7 +61,6 @@ struct Index {
       }
     }).catch((err: BusinessError) => {
       hilog.error(0x0000, 'Index', `requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`)
-
     })
   }
 
