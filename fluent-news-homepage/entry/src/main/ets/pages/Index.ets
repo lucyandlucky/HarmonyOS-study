@@ -65,5 +65,27 @@ struct Index {
   }
 
   build() {
+    GridRow({
+      columns: {
+        sm: BreakPointConstants.GRID_ROW_COLUMNS[0],
+        md: BreakPointConstants.GRID_ROW_COLUMNS[1],
+        lg: BreakPointConstants.GRID_ROW_COLUMNS[2],
+      }
+    }) {
+      GridCol({
+        span: {
+          sm: BreakPointConstants.GRID_COLUMN_SPANS[0],
+          md: BreakPointConstants.GRID_COLUMN_SPANS[1],
+          lg: BreakPointConstants.GRID_COLUMN_SPANS[4]
+        }
+      }) {
+        Text('home')
+      }
+      .width(CommonConstants.FULL_PERCENT)
+      .height(CommonConstants.FULL_PERCENT)
+    }
+    .onBreakpointChange((breakpoint) => {
+      this.currentBreakpoint = breakpoint
+    })
   }
 }
