@@ -86,6 +86,7 @@ struct Index {
       .height(CommonConstants.FULL_PERCENT)
     }
     .onBreakpointChange((breakpoint) => {
+      hilog.info(0x0000, 'onBreakpointChange', 'result=%{public}s', breakpoint)
       this.currentBreakpoint = breakpoint
     })
   }

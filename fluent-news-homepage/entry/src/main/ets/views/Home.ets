@@ -4,6 +4,9 @@ import { ComponentContent } from '@kit.ArkUI'
 import { BottomTabBuilder, TabBarOption } from './BottomTabBuilder'
 import { ResourceUtil } from '../utils/ResourceUtil'
 import { CommonConstants } from '../constants/CommonConstants'
+import { deviceInfo } from '@kit.BasicServicesKit'
+import lottie from '@ohos/lottie'
+
 
 @Component
 export struct Home {
@@ -13,9 +16,9 @@ export struct Home {
   private renderingSetting1: RenderingContextSettings = new RenderingContextSettings(true)
   private canvasRenderingContext1: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.renderingSetting1)
   private renderingSetting2: RenderingContextSettings = new RenderingContextSettings(true)
-  private canvasRenderingContext2: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.renderingSetting1)
+  private canvasRenderingContext2: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.renderingSetting2)
   private renderingSetting3: RenderingContextSettings = new RenderingContextSettings(true)
-  private canvasRenderingContext3: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.renderingSetting1)
+  private canvasRenderingContext3: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.renderingSetting3)
   @State currentIndex: number = 0
   private tabOption1: TabBarOption = {
     index: 0,
@@ -26,13 +29,66 @@ export struct Home {
     currentBottomIndex: this.currentIndex,
     currentBreakpoint: this.currentBreakpoint
   }
+  private tabOption2: TabBarOption = {
+    index: 1,
+    text: $r('app.string.tab_bar_option_two'),
+    name: 'tab2',
+    path: ResourceUtil.getLottiePath('tabbar2', this.currentMode),
+    canvasRenderingContext: this.canvasRenderingContext2,
+    currentBottomIndex: this.currentIndex,
+    currentBreakpoint: this.currentBreakpoint
+  }
+  private tabOption3: TabBarOption = {
+    index: 2,
+    text: $r('app.string.tab_bar_option_three'),
+    name: 'tab3',
+    path: ResourceUtil.getLottiePath('tabbar3', this.currentMode),
+    canvasRenderingContext: this.canvasRenderingContext3,
+    currentBottomIndex: this.currentIndex,
+    currentBreakpoint: this.currentBreakpoint
+  }
   private tabBarOption1 = new ComponentContent(
     this.getUIContext(),
     wrapBuilder<[TabBarOption]>(BottomTabBuilder),
     this.tabOption1
   )
+  private tabBarOption2 = new ComponentContent(
+    this.getUIContext(),
+    wrapBuilder<[TabBarOption]>(BottomTabBuilder),
+    this.tabOption2
+  )
+  private tabBarOption3 = new ComponentContent(
+    this.getUIContext(),
+    wrapBuilder<[TabBarOption]>(BottomTabBuilder),
+    this.tabOption3
+  )
 
   onColorModeChange(): void {
+  }
+
+  lottieController(): void {
+    if (this.currentIndex === 0) {
+      lottie.stop()
+      lottie.play(this.tabOption1.name)
+    }
+    if (this.currentIndex === 1) {
+      lottie.stop()
+      lottie.play(this.tabOption2.name)
+    }
+    if (this.currentIndex === 2) {
+      lottie.stop()
+      lottie.play(this.tabOption3.name)
+    }
+  }
+
+  updateTabIndex(targetIndex: number): void {
+    this.tabOption1.currentBottomIndex = targetIndex
+    this.tabOption2.currentBottomIndex = targetIndex
+    this.tabOption3.currentBottomIndex = targetIndex
+    this.tabBarOption1.update(this.tabOption1)
+    this.tabBarOption2.update(this.tabOption2)
+    this.tabBarOption3.update(this.tabOption3)
+
   }
 
   build() {
@@ -44,9 +100,36 @@ export struct Home {
         TabContent() {
           Text('home')
         }.tabBar(this.tabBarOption1)
+
+        TabContent() {
+          Text('Concerned')
+        }.tabBar(this.tabBarOption2)
+
+        TabContent() {
+          Text('Mine')
+        }.tabBar(this.tabBarOption3)
+
       }
       .barWidth(CommonConstants.FULL_PERCENT)
-      .barHeight('100vp')
+      .barHeight(this.currentBreakpoint === BreakPointConstants.BREAKPOINT_LG
+        ? CommonConstants.FULL_PERCENT
+        : deviceInfo.deviceType === CommonConstants.DEVICE_TYPES[0]
+          ? CommonConstants.TAB_BAR_HEIGHT
+          : CommonConstants.TAB_BAR_HEIGHT + CommonConstants.BOTTOM_RECT_HEIGHT
+      )
+      .barBackgroundColor($r('app.color.start_window_background'))
+      .barMode(
+        this.currentBreakpoint === BreakPointConstants.BREAKPOINT_LG
+          ? BarMode.Scrollable : BarMode.Fixed,
+        { nonScrollableLayoutStyle: LayoutStyle.ALWAYS_CENTER }
+      )
+      .vertical(this.currentBreakpoint === BreakPointConstants.BREAKPOINT_LG)
+      .onAnimationStart((_, targetIndex: number) => {
+        this.currentIndex = targetIndex
+        this.lottieController()
+        this.updateTabIndex(targetIndex)
+      })
+      .scrollable(false)
     }
   }
 }
